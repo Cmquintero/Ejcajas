@@ -1,37 +1,43 @@
-html,body {
+html,
+body {
     padding: 0;
     margin: 0;
 }
+
 header {
     background-color: purple;
     height: 60px;
+    grid-area: header;
 }
-nav{
+
+nav {
     background-color: beige;
-    width: 25%;
-   
-}
-section{
-    display: flex;
-    background-color: darkcyan;
-    overflow: hidden;
-    flex-direction: row-reverse;
     
+    grid-area: menu;
+
 }
+
 #container {
-    background-color: aqua;
+    background-color: aquamarine;
     margin: 0 auto;
     max-width: 800px;
     text-align: center;
+    display: grid;
+    grid-template-areas: 
+    'header header header header'
+    'menu content content content'
+    'footer footer footer footer';
 }
-article{
+
+article {
     background-color: aquamarine;
-  
-    width: 75%;
+width: auto;
     height: 80px;
 }
-footer{
-    clear: both;
+
+footer {
+    /*clear: both;*/
     background-color: violet;
     height: 120px;
+    grid-area: footer;
 }
